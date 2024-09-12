@@ -1,0 +1,248 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    :root {
+        --bg-color: #1d2631;
+        --tex-color: #fff;
+        --main-color: #34e7f8;
+        --accent-color: #ff758d;
+        --other-color: #fcfcfc;
+        --h1-font: 4rem;
+        --p-font: 1rem;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--tex-color);
+        padding-top: 100px;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 8%;
+        background-color: rgba(29, 38, 49, 0.9); /* Transparência no header */
+        backdrop-filter: blur(10px); /* Efeito de desfoque */
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        color: var(--tex-color);
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .logo i {
+        color: var(--main-color);
+        font-size: 32px;
+        margin-right: 5px;
+    }
+
+    .navegação {
+        display: flex;
+    }
+
+    .navegação a {
+        color: var(--other-color);
+        font-size: var(--p-font);
+        font-weight: 500;
+        margin: 0 30px;
+        transition: color 0.4s ease;
+    }
+
+    .navegação a:hover {
+        color: var(--main-color);
+    }
+
+    .products-section {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .products-section h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: var(--main-color);
+        font-weight: 600;
+    }
+
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .product-item {
+        background-color: #2e3a4a;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .product-item img {
+        width: 100%; /* Mantém a imagem responsiva */
+        max-width: 200px; /* Limita o tamanho máximo da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        aspect-ratio: 1/1; /* Define uma proporção fixa (quadrada) para a imagem */
+        margin-bottom: 15px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .product-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .product-item p {
+        color: var(--other-color);
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .product-item label {
+        display: block;
+        margin-top: 10px;
+        color: var(--other-color);
+        font-weight: 500;
+    }
+
+    .product-item input[type="checkbox"] {
+        margin-right: 10px;
+        accent-color: var(--main-color); /* Cor da checkbox */
+    }
+
+    .product-item input[type="number"] {
+        width: 60px;
+        padding: 5px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3c4958;
+        color: var(--tex-color);
+        text-align: center;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .product-item input[type="number"]:focus {
+        background-color: #495c6f;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .products-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .products-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .products-section h2 {
+            font-size: 32px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .products-container {
+            grid-template-columns: 1fr;
+        }
+
+        .products-section h2 {
+            font-size: 28px;
+        }
+    }
+
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+        gap: 30px; /* Espaço entre os itens */
+        padding: 40px;
+    }
+    
+    .product-item {
+        background-color: #2e3a4a;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .product-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    
+    .product-item img {
+        width: 100%; 
+        max-width: 200px;
+        height: auto; 
+        margin-bottom: 15px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .products-container {
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas menores */
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        .products-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .products-container {
+            grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+        }
+    }
+    
+    .purchase-section {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    
+    #purchase-btn {
+        background-color: var(--main-color);
+        color: var(--tex-color);
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    #purchase-btn:hover {
+        background-color: var(--accent-color);
+        transform: scale(1.05);
+    }
+    
