@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-
 <?php
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $telefone = $_POST["telefone"];
-    $cpf = $_POST["cpf"];
-    $endereco = $_POST["endereco"];
-    $cidade = $_POST["cidade"];
-    $estado = $_POST["estado"];
-    $cep = $_POST["cep"];
+session_start();
 
-    $total = $_POST["total"];
+$nome = $_SESSION["nome"];
+$email = $_SESSION["email"];
+$telefone = $_SESSION["telefone"];
+$cpf = $_SESSION["cpf"];
+$endereco = $_SESSION["endereco"];
+$cidade = $_SESSION["cidade"];
+$estado = $_SESSION["estado"];
+$cep = $_SESSION["cep"];
 
-    $produtos = [];
-    for ($i = 1; $i <= 12; $i++) {
-        $produto = isset($_POST["prod$i"]) ? $_POST["prod$i"] : "";
-        $quantidade = isset($_POST["qtd$i"]) ? $_POST["qtd$i"] : 0;
-        
-        if ($produto != "") {
-            $produtos[] = ["nome" => $produto, "quantidade" => $quantidade, "preco" => 99.99];
-        }
+$total = $_POST["total"]; 
+$produtos = [];
+for ($i = 1; $i <= 12; $i++) {
+    $produto = isset($_POST["prod$i"]) ? $_POST["prod$i"] : "";
+    $quantidade = isset($_POST["qtd$i"]) ? $_POST["qtd$i"] : 0;
+    
+    if ($produto != "") {
+        $produtos[] = ["nome" => $produto, "quantidade" => $quantidade, "preco" => 99.99];
     }
+}
 ?>
+
 
 <html lang="pt-br">
 <head>
@@ -42,9 +42,9 @@
         <a href="#" class="logo"><i class='bx bx-headphone'></i>Storm Fones</a>
 
         <ul class="navegação">
-            <li><a href="index.php">Visão geral</a></li>
-            <li><a href="index.php">Sobre nós</a></li>
-            <li><a href="index.php">Contate-nos</a></li>
+            <li><a href="../index.php">Visão geral</a></li>
+            <li><a href="../index.php">Sobre nós</a></li>
+            <li><a href="../index.php">Contate-nos</a></li>
         </ul>
     </header>
 

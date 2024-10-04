@@ -43,9 +43,10 @@
         <a href="#" class="logo"><i class='bx bx-headphone'></i>Storm Fones</a>
 
         <ul class="navegação">
-            <li><a href="index.php">Visão geral</a></li>
-            <li><a href="index.php">Sobre nós</a></li>
-            <li><a href="index.php">Contate-nos</a></li>
+            <li><a href="../index.php">Visão geral</a></li>
+            <li><a href="../index.php">Sobre nós</a></li>
+            <li><a href="../
+            index.php">Contate-nos</a></li>
         </ul>
     </header>
 

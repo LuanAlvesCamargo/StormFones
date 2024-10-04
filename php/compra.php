@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <?php
-    // recebendo variáveis do formulário cadCliente
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $telefone = $_POST["telefone"];

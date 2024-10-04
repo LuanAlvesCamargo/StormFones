@@ -23,7 +23,7 @@
             <li><a href="index.php">Visão geral</a></li>
             <li><a href="index.php">Sobre nós</a></li>
             <li><a href="php/cadCliente.php">faça o seu cadastro</a></li>
-            <li><a href="index.php">Contate-nos</a></li>
+            <li><a href="php/cadProduto.php">Cadastrar Produto</a></li>
         </ul>
 
         <div class="header-icons">
